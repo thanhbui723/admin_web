@@ -1,0 +1,154 @@
+   <link rel="stylesheet" href="css/inbox.css">
+    
+</head>
+<body>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a  href="/">
+                        <span class="icon"><i class="  fas fa-home" aria-hidden="true"></i></span>
+                        <span  class="title"><h2>ADMINSHOP</h2></span>
+                    </a>
+                </li>
+                <br><br>
+                <li>
+                    <a  href="/">
+                        <span class="icon"><i class="  fas fa-home" aria-hidden="true"></i></span>
+                        <span  class="title">Trang chủ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="products">
+                        <span class="icon"><i class="fas fa-shopping-basket" aria-hidden="true"></i></span>
+                        <span  class="title">Quản lý nhà sản phẩm</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="bill">
+                        <span class="icon"><i class="fas fa-users" aria-hidden="true"></i></span>
+                        <span  class="title">Quản lý đơn hàng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="user">
+                        <span class="icon"><i class="fas fa-user" aria-hidden="true"></i></span>
+                        <span  class="title">Quản lý khách hàng</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="isActive" href="inbox">
+                        <span class="icon"><i class="fas fa-comments"></i></span>
+                        <span  class="title">Trò chuyện</span>
+                    </a>
+                </li>
+            
+                
+    
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick="toggleMenu();"></div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Tìm kiếm">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </label>
+                </div>
+                <div class="user">
+                    <a href="profile"><img src="images/user.jpg"></a>
+                </div>
+            </div>
+           
+            <div class="details">
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                         <h2>Recent InBox</h2>
+                     </div>
+                     <div class="search_inbox">
+                        <label>
+                            <input type="text" placeholder="Search here">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <table>
+                        <tbody>
+                          <tr>
+                            <td width="60"><div class="imgBx"><img src="images/img1.jpg"></div></td>   
+                            <td><h4>Thanh Bùi<br><span>Xin chào tôi muốn hỏi thông tin về sản phẩm này</span></h4></td>
+                            <td class="time">Bây giờ</td>
+                          </tr>  
+                          <tr>
+                            <td><div class="imgBx"><img src="images/img2.jpg"><img src="img2.jpg"></div></td>   
+                            <td><h4>Ngọc Minh<br><span>Tôi muốn mua sản phẩm này</span></h4></td>
+                            <td class="time">10:20PM</td>
+                        </tr>  
+                          <tr>
+                            <td><div class="imgBx"><img src="images/img3.jpg"></div></td>   
+                            <td><h4>Kiều Trinh<br><span>Váy này còn hàng không ạ</span></h4></td>
+                            <td class="time">Hôm qua</td>
+                          </tr>  
+                          <tr>
+                            <td><div class="imgBx"><img src="images/img4.jpg"></div></td>   
+                            <td><h4>Như Trang<br><span>Sản phẩm này đẹp quá</span></h4></td>
+                            <td class="time">11:20PM</td>
+                          </tr>  
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="inboxContent">
+                    <div class="chat-header">
+                        <div class="imgBx">
+                            <img src="images/img1.jpg" alt="avatar">
+                        </div>
+                        <div class="chat-about">
+                            <div class="name">Kiều Trinh                         
+                            </div>
+                            <div class="time-active">Active 20m ago                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-content">
+                        <div class="me">
+                            <p>Tối có thể giúp gì cho bạn</p>
+                        </div>
+                        <div class="you">
+                           <p> Tôi muốn mua một cái áo nhưng tôi tìm được cái mình muốn</p>
+                        </div>
+                        <div class="me">
+                            <p>Đợi mình một chút</p>
+                        </div>
+                        <div class="you">
+                            <p>Vâng</p>
+                        </div>
+                        <div class="me">
+                            <p>Vâng đây ạ</p>
+                        </div>                      
+                        <div class="you">
+                            <p>Xin cảm ơn</p>
+                        </div>
+                    </div>
+                    <div class="chat-lable">
+                        <div class="iconPic"><i class="far fa-image"></i></div>
+                        <div class="boxchat">
+                            <label>
+                                <input type="text" placeholder="Please enter your messege">
+                            </label>
+                        </div>
+                        <div class="iconSend"><i class="fas fa-paper-plane"></i></div>
+                    </div>
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        
+
+    </div>

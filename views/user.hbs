@@ -1,0 +1,150 @@
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+<div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="/">
+                        <span class="icon"><i class="  fas fa-home" aria-hidden="true"></i></span>
+                        <span  class="title"><h2>ADMINSHOP</h2></span>
+                    </a>
+                </li>
+                <br><br>
+                <li>
+                    <a href="/">
+                        <span class="icon"><i class="  fas fa-home" aria-hidden="true"></i></span>
+                        <span  class="title">Trang chủ</span>
+                    </a>
+                </li>
+                <li>
+                    <a  href="products">
+                        <span class="icon"><i class="fas fa-shopping-basket" aria-hidden="true"></i></span>
+                        <span  class="title">Quản lý sản phẩm</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="bill">
+                        <span class="icon"><i class="fas fa-users" aria-hidden="true"></i></span>
+                        <span  class="title">Quản lý đơn hàng</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="isActive" href="user">
+                        <span class="icon"><i class="fas fa-user" aria-hidden="true"></i></span>
+                        <span  class="title">Quản lý khách hàng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="inbox">
+                        <span class="icon"><i class="fas fa-comments"></i></span>
+                        <span  class="title">Trò chuyện</span>
+                    </a>
+                </li>
+
+                
+    
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick="toggleMenu();"></div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Tìm kiếm">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </label>
+                </div>
+                <div class="user">
+                    <a href="profile"><img src="images/user.jpg"></a>
+                </div>
+            </div>
+          
+            <div class="details">
+                <div class="product">
+                    <div class="cardHeader">
+                        <h2>Khách hàng</h2>
+                        <a href="add_product" class="btn_them">+ Thêm Khách hàng mới</a>
+                        <a href="#" class="btn">Xem tất cả</a>
+                    </div>
+                    <table >
+                        <thead>
+                            <tr>
+                                <td>Hình Ảnh</td>
+                                <td>Tên Khách hàng</td>
+                                <td>Địa chỉ</td>
+                                <td>Số điện thoại</td>
+                                <td>Tên tài khoản</td>
+                                <td>Mật khẩu</td>   
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="info_product"><img src="images/img1.jpg"></a></td>
+                                <td>Ngọc Minh</td>
+                                <td>VietNam</td>
+                                <td>01303033</td>
+                                <td>minh2000</td>
+                                <td>123456</td>
+                            </tr>
+                            <tr>
+                                <td><span><img src="images/img2.jpg"></span></td>
+                                <td>Thanh Bui</td>
+                                <td>VietNam</td>
+                                <td>034034303</td>
+                                <td>thanh102202</td>
+                                <td>111111</td>
+                            </tr>
+                            <tr>
+                                <td><span><img src="images/img3.jpg"></span></td>
+                                <td>TrinhKieu</td>
+                                <td>VietNam</td>
+                                <td>09797979</td>
+                                <td>trinh7979</td>
+                                <td>123456</td>
+                            </tr>
+                            <tr>
+                                <td><span><img src="images/img4.jpg"></span></td>
+                                <td>NhuTrang</td>
+                                <td>VietNam</td>
+                                <td>012344232</td>
+                                <td>trang00333</td>
+                                <td>134563</td>
+                            </tr> 
+                           
+                        </tbody>
+                    </table>
+                        <ul  class="pagination " >
+                            <li class="pagination_item">
+                                <a href="" class="pagination_item_click"><</a>
+                            </li>
+                            <li class="pagination_item active">
+                                <a href="" class="pagination_item_click">1</a>
+                            </li>
+                            <li class="pagination_item">
+                                <a href="" class="pagination_item_click">2</a>
+                            </li>
+                            <li class="pagination_item">
+                                <a href="" class="pagination_item_click">3</a>
+                            </li>
+                            <li class="pagination_item">
+                                <a href="" class="pagination_item_click">...</a>
+                            </li>
+                            <li class="pagination_item">
+                                <a href="" class="pagination_item_click">10</a>
+                            </li>
+                            <li class="pagination_item">
+                                <a href="" class="pagination_item_click">></a>
+                            </li>
+                        </ul>   
+                </div>
+                <div >
+                   
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>

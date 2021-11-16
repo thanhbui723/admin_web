@@ -1,0 +1,325 @@
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+    color: #797979;
+	background: rgb(182, 173, 173);
+    font-family: 'Ruda', sans-serif;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #003147;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active{
+    width: 60px;
+}
+.navigation ul{
+   position: relative;
+   top: 0;
+   left: 0;
+   width: 100%; 
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+.navigation ul li:hover{
+    background: #03a9f4;
+    color: #fff;
+}
+.navigation ul li:nth-child(1){
+    background: transparent;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+.navigation ul li a.isActive{
+    background: #03a9f4 ;
+    color: #fff;
+}
+.navigation ul li a .icon{
+    
+    padding: 15 10;
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+    
+
+}
+.navigation ul li a .icon .fas{
+  font-size: 24px;
+  align-items: center;
+}
+.navigation ul li a .title{
+    padding: 0 20;
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+ul.nav-drop{
+    position: relative;
+    padding-left: 50p ;
+    opacity: 0;
+}
+.main{
+      position: absolute;
+      width: calc(100% - 300px);
+      left: 300px;
+      min-height: 100vh;
+      background: rgb(221, 221, 221);
+      transition: 0.5s;
+}
+.main.active{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+.main .topbar{
+    padding-right: 10px;
+    width: 100%;
+    background: #fff;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px ;
+   
+    cursor: pointer;
+}
+.toggle::before{
+    content: '\f0c9';
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24 ;
+    text-align: center;
+    color: black;
+    font-weight: 900;
+}
+.search label{
+    position: relative;
+    width: 100%;
+}
+.search label input{
+    padding-left: 40px;
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    pad: 5px 20px;
+    outline: none;
+    border: 1px solid black;
+}
+.search label .fas{
+    position: absolute;
+    left: 15px;
+    top: 4px;
+}
+.user{
+    position: relative;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow:hidden;
+    cursor: pointer;
+}
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details{
+   position: relative;
+   width: 100%;
+}
+.details .recentOrders{
+    position: relative;
+    min-height: 530px;
+    background: #fff;
+    padding: 30px;
+}
+
+.main .infoCustomer{
+    width: 100%;
+    background: #fff;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+}
+.main .infoCustomer .textInfo{
+    color: black;
+    font-style: normal;
+}
+.main .infoCustomer .textInfo h2 {
+    color: black;
+    font-style: normal;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.main .infoCustomer .textInfo h4 {
+    font-size: 15px;
+    font-style: italic;
+    color: grey;
+    font-weight: lighter;
+}
+.main .infoCustomer:last-child,
+.main .infoCustomer:last-child{
+   text-align:left;
+}
+.main .infoCustomer:last-child,:nth-child(2),
+.main .infoCustomer:last-child,:nth-child(2){
+    text-align: left;
+}
+
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardHeader h2{
+    font-weight: 700;
+    color: black;
+}
+
+.details table, td, tr{
+    width: 100%;
+    border-collapse: collapse;
+    border: 0.5px solid rgb(233, 229, 229);
+}
+
+.details .recentOrders table tr td{
+    padding: 9px 5px;
+}
+.details .recentOrders table tr td:nth-child(1),
+.details .recentOrders table tr td:nth-child(1){
+   text-align:right;
+}
+.details .recentOrders table tr td:nth-child(2),
+.details .recentOrders table tr td:nth-child(2){
+    text-align: right;
+
+}
+
+.name{
+    position: relative;
+    display: flex;
+}
+.name li{
+    list-style: none;
+    padding: 10px;
+}
+.name_title{
+    font-size: 20px;
+    font-weight: lighter;
+    color: black;
+}
+.price{
+    color: orange;
+}
+.totalBill{
+    font-size: 30px;
+    color: orange;
+}
+
+
+
+
+
+/* Reponsive*/
+@media(max-width: 992px)
+{
+    .navigation{
+        left: -300px;
+    }
+    .navigation.active{
+        left: 0;
+        width: 300px;
+    }
+    .main{
+        width: 100%;
+        left: 0;
+    }
+    .main.active{
+        width: calc(100% - 300px);
+        left: 300px;
+    }
+}
+@media(max-width: 758px){
+    .details{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .cardHeader h2{
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+@media(max-width: 480px){
+    .details.recentOrders {
+        overflow: auto;
+    }
+    .details.recentOrders table{
+        width: 600px;
+    }
+    .navigation{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .navigation.active{
+        width: 100%;
+        left: 0;
+    }
+    .toggle.active{
+        z-index: 10000;
+        right: 0;
+        left: initial;
+        position: fixed ;
+    }
+    .toggle.active::before{
+        color: white;
+    }
+    .main,
+    .main.active{
+        width: 100%;
+        left: 0;
+    }
+}
+
+

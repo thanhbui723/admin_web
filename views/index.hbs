@@ -1,0 +1,208 @@
+   <link rel="stylesheet" href="css/home.css">  
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a  href="/">
+                        <span class="icon"><i class="  fas fa-home" aria-hidden="true"></i></span>
+                        <span  class="title"><h2>ADMINSHOP</h2></span>
+                    </a>
+                </li>
+                <br><br>
+                <li>
+                    <a class="isActive" href="/">
+                        <span class="icon"><i class="  fas fa-home" aria-hidden="true"></i></span>
+                        <span  class="title">Trang chủ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="products">
+                        <span class="icon"><i class="fas fa-shopping-basket" aria-hidden="true"></i></span>
+                        <span  class="title">Quản lý sản phẩm</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="bill">
+                        <span class="icon"><i class="fas fa-users" aria-hidden="true"></i></span>
+                        <span  class="title">Quản lý đơn hàng</span>
+                    <a>
+                </li>
+                <li>
+                    <a href="user">
+                        <span class="icon"><i class="fas fa-user" aria-hidden="true"></i></span>
+                        <span  class="title">Quản lý khách hàng</span>
+                    <a>
+                </li>
+                <li>
+                    <a href="inbox">
+                        <span class="icon"><i class="fas fa-comments"></i></span>
+                        <span  class="title">Trò chuyện</span>
+                    </a>
+                </li>
+            
+                
+    
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick="toggleMenu();"></div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Tìm kiếm">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </label>
+                </div>
+                <div class="user">
+                    <a href="profile"><img src="images/user.jpg"></a>
+                </div>
+            </div>
+
+
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">50</div>
+                        <div class="cardName">Bán trong ngày</div> 
+                    </div>     
+                    <div class="iconBox"><i class="fas fa-shopping-cart"></i></div> 
+                </div>
+               
+                <div class="card">
+                    <div>
+                        <div class="numbers">279</div>
+                        <div class="cardName">Bán trong tuần</div>
+                    </div>
+                    <div class="iconBox"><i class="fas fa-shopping-cart"></i></div>
+                </div>
+                
+                <div class="card">
+                    <div>
+                        <div class="numbers">1000</div>
+                        <div class="cardName">Bán trong tháng</div> 
+                    </div>
+                    <div class="iconBox"><i class="fas fa-shopping-cart"></i></div>
+                </div>
+                
+                <div class="card">
+                    <div>
+                        <div class="numbers">10000</div>
+                        <div class="cardName">Bán trong năm</div> 
+                    </div>
+                    <div class="iconBox"><i class="fas fa-shopping-cart"></i></div>
+                </div>
+            </div>
+           
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Top 10</h2>
+                        <a href="#" class="btn">View all</a>
+                    </div>
+                    <table >
+                        <thead>
+                            <tr>
+                                <td>Tên sản phẩm</td>
+                                <td>Số lượng</td>
+                                <td>Doanh thu</td>
+                                <td>Hạng</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sản phẩm 1 </td>
+                                <td>300</td>
+                                <td>500$</td>
+                                <td><span class="status delivered">1</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sản phẩm 2</td>
+                                <td>278</td>
+                                <td>450$</td>
+                                <td><span class="status delivered">2</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sản phẩm 3</td>
+                                <td>240</td>
+                                <td>400$</td>
+                                <td><span class="status delivered">3</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sản phẩm 4</td>
+                                <td>235</td>
+                                <td>395$</td>
+                                <td><span class="status delivered">4</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sản phẩm 5</td>
+                                <td>200</td>
+                                <td>350$</td>
+                                <td><span class="status delivered">5</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sản phẩm 6</td>
+                                <td>195</td>
+                                <td>330$</td>
+                                <td><span class="status delivered">6</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sản phẩm 7</td>
+                                <td>178</td>
+                                <td>300$</td>
+                                <td><span class="status delivered">7</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sản phẩm 8</td>
+                                <td>150</td>
+                                <td>200$</td>
+                                <td><span class="status delivered">8</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sản phẩm 9</td>
+                                <td>100</td>
+                                <td>100$</td>
+                                <td><span class="status delivered">9</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sản phẩm 10</td>
+                                <td>46</td>
+                                <td>75$</td>
+                                <td><span class="status delivered">10</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                         <h2>Khách hàng gần đây</h2>
+                     </div>
+                    <table>
+                        <tbody>
+                          <tr>
+                            <td width="60"><div class="imgBx"><img src="images/img1.jpg"></div></td>   
+                            <td><h4>Thanh Bùi<br><span>VietNam</span></h4></td>
+                          </tr>  
+                          <tr>
+                            <td><div class="imgBx"><img src="images/img2.jpg"><img src="images/img2.jpg"></div></td>   
+                            <td><h4>Ngọc Minh<br><span>VietNam</span></h4></td>
+                          </tr>  
+                          <tr>
+                            <td><div class="imgBx"><img src="images/img3.jpg"></div></td>   
+                            <td><h4>Kiều Trinh<br><span>VietNam</span></h4></td>
+                          </tr>  
+                          <tr>
+                            <td><div class="imgBx"><img src="images/img4.jpg"></div></td>   
+                            <td><h4>Như Trang<br><span>VietNam</span></h4></td>
+                          </tr>   
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        
+
+</div>

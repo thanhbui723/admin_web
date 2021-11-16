@@ -1,0 +1,471 @@
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+    color: #797979;
+	background: rgb(182, 173, 173);
+    font-family: 'Ruda', sans-serif;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #003147;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active{
+    width: 60px;
+}
+.navigation ul{
+   position: relative;
+   top: 0;
+   left: 0;
+   width: 100%; 
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+.navigation ul li:hover{
+    background: #03a9f4;
+    color: #fff;
+}
+.navigation ul li:nth-child(1){
+    background: transparent;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+.navigation ul li a.isActive{
+    background: #03a9f4 ;
+}
+.navigation ul li a .icon{
+    
+    padding: 15 10;
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+    
+
+}
+.navigation ul li a .icon .fas{
+  font-size: 24px;
+  align-items: center;
+}
+.navigation ul li a .title{
+    padding: 0 20;
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+ul.nav-drop{
+    position: relative;
+    padding-left: 50p ;
+    opacity: 0;
+}
+.main{
+      position: absolute;
+      width: calc(100% - 300px);
+      left: 300px;
+      min-height: 100vh;
+      background: rgb(221, 221, 221);
+      transition: 0.5s;
+}
+.main.active{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+.main .topbar{
+    padding-right: 10px;
+    width: 100%;
+    background: #fff;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px ;
+   
+    cursor: pointer;
+}
+.toggle::before{
+    content: '\f0c9';
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24 ;
+    text-align: center;
+    color: black;
+    font-weight: 900;
+}
+.search label{
+    position: relative;
+    width: 100%;
+}
+.search label input{
+
+    padding-left: 40px;
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    pad: 5px 20px;
+    outline: none;
+    border: 1px solid black;
+}
+.search label .fas{
+    position: absolute;
+    left: 15px;
+    top: 4px;
+}
+.search_inbox label{
+    position: relative;
+    width: 100%;
+}
+.search_inbox label input{
+    padding-left: 40px;
+    width: 100%;
+    height: 30px;
+    border-radius: 40px;
+    pad: 5px 20px;
+    outline: none;
+    border: 1px solid whitesmoke;
+}
+.search_inbox label .fas{
+    position: absolute;
+    left: 15px;
+    top: 4px;
+}
+.user{
+    position: relative;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow:hidden;
+    cursor: pointer;
+}
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details{
+   position: relative;
+   width: 100%;
+   min-height: 600px;
+   padding: 20px;
+   padding-top: 10px;
+   display: grid;
+   grid-gap: 5px;
+   grid-template-columns: 1fr 2fr;
+}
+.details .inboxContent{
+    overflow-y: auto;
+    position: relative;
+    background: #fff;
+    float: left;
+}
+.chat-header{
+    height: 100px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+}
+.chat-content{
+    overflow-y: auto;
+    min-height: 400px;
+    padding: 10px;
+    position: relative;
+    background-color: whitesmoke;
+}
+ .me{
+    margin: 10px;
+    background-color: #03a9f4 ;
+    padding: 10px;
+    display: table;
+    clear:  both;
+    border-radius: 5px;
+    max-width: 80%;
+    float: right;
+} 
+.me p{
+    color: white;
+    font-size: 15;
+    font-weight: lighter;
+}
+.you p{
+    color: white;
+    font-size: 15;
+    font-weight: lighter;
+}
+.you{
+    margin: 10px;
+    background-color: #838485 ;
+    color: whitesmoke;
+    padding: 10px;
+    display: table;
+    clear:  both;
+    border-radius: 5px;
+    max-width: 80%;
+    float: left;
+} 
+.chat-lable{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.chat-lable .boxchat label{
+    position: static;
+    width: 100%;
+    padding: auto;
+    
+}
+.chat-lable .boxchat label input{
+    padding-left: 40px;
+    width: 500px;
+    height: 40px;
+    border-radius: 10px;
+    pad: 5px 20px;
+    outline: none;
+    border: 1px solid black;
+
+}
+.details .recentCustomers{
+    overflow-y: auto;
+    position: relative;
+    min-height: 530px;
+    background: #fff;
+    padding: 20px;
+}
+
+.cardHeader h2{
+    font-weight: 700;
+    color: black;
+}
+.btn{
+    position: relative;
+    padding: 5px 10px;
+    background: rgb(45, 157, 231);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 60px;
+}
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.details table thead td{
+    font-weight: 600;
+}
+.details .recentOrders table tr{
+    border-bottom: 1px solid black;
+}
+.details .recentOrders table tbody tr:last-child{
+    border-bottom: none;
+}
+.details .recentOrders table tbody tr:hover{
+    background: #03a9f4;
+    color: #fff;
+}
+.details .recentOrders table tr td{
+    padding: 9px 5px;
+}
+.details .recentOrders table tr td:last-child,
+.details .recentOrders table tr td:last-child{
+   text-align:right;
+}
+.details .recentOrders table tr td:nth-child(2),
+.details .recentOrders table tr td:nth-child(2){
+    text-align: right;
+    padding-right: 20px;
+    
+}
+.details .recentOrders table tr td:nth-child(3),
+.details .recentOrders table tr td:nth-child(3){
+    text-align: center;
+}
+
+.details .inboxContent .imgBx{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.details .inboxContent .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.details .inboxContent .chat-about {
+    position: relative;
+}
+.details .inboxContent .chat-about .name{
+    font-size: 30px;
+    padding-left: 10px;
+    color: black;
+    font-weight: 700;
+}
+.details .inboxContent .chat-about .time-active{
+    font-size: 15;
+    padding-left: 10px;
+    color: gray;
+    font-weight: lighter;
+}
+
+
+.details .recentCustomers .imgBx{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.details .recentCustomers .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.time{
+    font-size: 10px;
+    align-items: top;
+}
+
+.messege{
+    overflow: hidden;
+    width:100px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.details .recentCustomers table tr:hover{
+    background: #03a9f4;
+    color: #fff;
+}
+.details .recentCustomers table tr td{
+    padding: 10px 10px;
+}
+.details .recentCustomers table tr td h4{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+    color: black;
+}
+.details .recentCustomers table tr td h4 span{
+    font-size: 14px;
+    color: #999;
+    overflow: hidden;
+    width:150;
+    height: 60px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Reponsive*/
+@media(max-width: 992px)
+{
+    .navigation{
+        left: -300px;
+    }
+    .navigation.active{
+        left: 0;
+        width: 300px;
+    }
+    .main{
+        width: 100%;
+        left: 0;
+    }
+    .main.active{
+        width: calc(100% - 300px);
+        left: 300px;
+    }
+    .cardBox{
+        grid-template-columns: repeat(2,1fr);
+   
+    }
+}
+@media(max-width: 758px){
+    .details{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .cardHeader h2{
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+@media(max-width: 480px){
+    .cardBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .details.recentOrders {
+        overflow: auto;
+    }
+    .details.recentOrders table{
+        width: 600px;
+    }
+    .navigation{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .navigation.active{
+        width: 100%;
+        left: 0;
+    }
+    .toggle.active{
+        z-index: 10000;
+        right: 0;
+        left: initial;
+        position: fixed ;
+    }
+    .toggle.active::before{
+        color: white;
+    }
+    .main,
+    .main.active{
+        width: 100%;
+        left: 0;
+    }
+}
+
+

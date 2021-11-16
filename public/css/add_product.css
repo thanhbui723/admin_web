@@ -1,0 +1,328 @@
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+    color: #797979;
+	background: rgb(182, 173, 173);
+    font-family: 'Ruda', sans-serif;
+}
+
+
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #003147;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active{
+    width: 60px;
+}
+.navigation ul{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%; 
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+.navigation ul li:hover{
+    background: #03a9f4;
+}
+.navigation ul li:nth-child(1){
+    background: transparent;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+.navigation ul li a.isActive{
+    background: #03a9f4 ;
+}
+.navigation ul li a .icon{
+    
+    padding: 15 10;
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+    
+
+}
+.navigation ul li a .icon .fas{
+  font-size: 24px;
+  align-items: center;
+}
+.navigation ul li a .title{
+    padding: 0 20;
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.main{
+      position: absolute;
+      width: calc(100% - 300px);
+      left: 300px;
+      min-height: 100vh;
+      background: rgb(221, 221, 221);
+      transition: 0.5s;
+}
+.main.active{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+.main .topbar{
+    padding-right: 10px;
+    width: 100%;
+    background: #fff;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px ;
+   
+    cursor: pointer;
+}
+.toggle::before{
+    content: '\f0c9';
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24 ;
+    text-align: center;
+    color: black;
+    font-weight: 900;
+}
+
+.search label{
+    position: relative;
+    width: 100%;
+}
+.search label input{
+    padding-left: 40px;
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    pad: 5px 20px;
+    outline: none;
+    border: 1px solid black;
+}
+.search label .fas{
+    position: absolute;
+    left: 15px;
+    top: 4px;
+}
+.user{
+    position: relative;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow:hidden;
+    cursor: pointer;
+}
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details{
+   position: relative;
+   width: 100%;
+   padding: 10px;
+   padding-top: 10px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+
+}
+.details .productInfo{
+    position: relative;
+    min-height: 530px;
+    background: #fff;
+    padding: 20px; 
+}
+.details .productImg{
+    position: relative;
+    min-height: 530px;
+    background: #fff;
+    padding: 20px;  
+}
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.productMain{
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.productMain h2{
+    font-weight: 500;
+    font-size: 15px;
+    color: black;
+}
+
+.btn_them{
+    height: 100%;
+    position: relative;
+    padding: 5px 10px;
+    background: rgb(228, 98, 109);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn_them:hover{
+    background: transparent;
+    color: rgb(241, 19, 37);
+    border: 2px solid black;
+
+}
+
+.form{
+    padding: 10 10;
+    font-size: 100px;
+ }
+ .form label{
+     position: relative;
+     width: 100%;
+ }
+ .form label input{
+     padding-left: 10px;
+     width: 70%;
+     height: 40px;
+     border-radius: 5px;
+     pad: 5px 20px;
+     outline: none;
+     border: 1px solid black;
+ }
+ .form textarea{
+    position: relative;
+    width: 70%;
+    font-size: 13px;
+    font-family: 'Ruda', sans-serif;
+    padding-left: 10px;
+ }
+ .form textarea input{
+     width: 70%;
+     height: 40px;
+     border-radius: 5px;
+     outline: none;
+     border: 1px solid black;
+     resize: vertical;
+ }
+
+ .productImg{
+    align-items: center;
+    justify-content: center; 
+ }
+ .productImg img{
+     height: 300;
+     width: 300;   
+ }
+ .productImg img a{
+    position: relative;
+    align-items: center;   
+    justify-content: center;
+}
+ .details .button{
+    margin-top: 20px;
+ }
+
+/* Reponsive*/
+@media(max-width: 992px)
+{
+    .navigation{
+        left: -300px;
+    }
+    .navigation.active{
+        left: 0;
+        width: 300px;
+    }
+    .main{
+        width: 100%;
+        left: 0;
+    }
+    .main.active{
+        width: calc(100% - 300px);
+        left: 300px;
+    }
+    .cardBox{
+        grid-template-columns: repeat(2,1fr);
+   
+    }
+}
+@media(max-width: 758px){
+    .details{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .cardHeader h2{
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+@media(max-width: 480px){
+    .cardBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .details.product {
+        overflow: auto;
+    }
+    .details.product table{
+        width: 600px;
+    }
+    .navigation{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .navigation.active{
+        width: 100%;
+        left: 0;
+    }
+    .toggle.active{
+        z-index: 10000;
+        right: 0;
+        left: initial;
+        position: fixed ;
+    }
+    .toggle.active::before{
+        color: white;
+    }
+    .main,
+    .main.active{
+        width: 100%;
+        left: 0;
+    }
+}
+
+
