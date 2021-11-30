@@ -11,6 +11,8 @@ const billRouter = require('./routes/bill');
 const userRouter = require('./routes/user');
 const inboxRouter = require('./routes/inbox');
 const profileRouter = require('./routes/profile');
+const info_productRouter = require('./routes/info_product');
+const add_productRouter = require('./routes/add_product');
 
 
 const app = express();
@@ -32,8 +34,8 @@ app.use('/bill', billRouter);
 app.use('/inbox', inboxRouter);
 app.use('/user', userRouter);
 app.use('/profile', profileRouter);
-
-
+app.use('/info_product', info_productRouter);
+app.use('/add_product', add_productRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
